@@ -5,7 +5,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import pro.sky.Homework22.exception.myIllegalArgumentException;
+import pro.sky.Homework22.exception.WrongArgumentException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -55,7 +55,7 @@ class CalculatorServiceImplTest {
      */
     @Test
     void testDivide() {
-        assertThrows(myIllegalArgumentException.class, () -> calculatorServiceImpl.divide(10, 0));
+        assertThrows(WrongArgumentException.class, () -> calculatorServiceImpl.divide(10, 0));
     }
     @Test
     void testDivide2() {
